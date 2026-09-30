@@ -6,3 +6,7 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 .DS_Store
+
+# Airflow + datos de entrada descargables
+logs/
+Proyectos/input/

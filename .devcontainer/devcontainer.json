@@ -1,10 +1,7 @@
 {
   "name": "STUDENT-TEST Platform Workspace",
-
   "image": "z2hx/lakehouse:1.0",
-
   "remoteUser": "z2h",
-
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {
       "version": "latest"
@@ -13,11 +10,9 @@
       "version": "latest"
     }
   },
-
   "runArgs": [
     "--privileged"
   ],
-
   "customizations": {
     "vscode": {
       "extensions": [
@@ -28,13 +23,19 @@
       ]
     }
   },
-
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash",
     "editor.formatOnSave": true
   },
-
-  "forwardPorts": [8080, 6443, 8888],
-
-  "postCreateCommand": "echo 'Platform image cargada correctamente.'"
+  "forwardPorts": [
+    8080,
+    6443,
+    8888
+  ],
+  "postCreateCommand": "echo 'Platform image cargada correctamente.'",
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb",
+    "storage": "64gb"
+  }
 }

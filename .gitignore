@@ -1,0 +1,10 @@
+venv/
+nivel-0/venv/
+nivel-1/venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+data/
+*.csv
+*.parquet
+.env

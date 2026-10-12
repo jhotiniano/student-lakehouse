@@ -32,10 +32,5 @@
     6443,
     8888
   ],
-  "postCreateCommand": "echo 'Platform image cargada correctamente.'",
-  "hostRequirements": {
-    "cpus": 4,
-    "memory": "16gb",
-    "storage": "64gb"
-  }
+  "postCreateCommand": "echo 'Platform image cargada correctamente.'"
 }

@@ -1,0 +1,35 @@
+# ============================================================
+# ETL Pipeline — Configuración externa
+# El código NO debe cambiar cuando cambia el entorno.
+# Solo cambia este archivo.
+# ============================================================
+
+source:
+  url: "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet"
+
+bronze:
+  bucket: "bronze"
+  object_path: "yellow_taxi/yellow_tripdata_2024-01.parquet"
+
+minio:
+  # Default: localhost (los scripts corren desde el host del Codespace).
+  # Si el pipeline corre dentro de un container de la red compose, cambiar a:
+  #   endpoint: "http://minio:9000"
+  endpoint: "http://localhost:9000"
+  # Credenciales se leen desde variables de entorno:
+  # MINIO_ROOT_USER / MINIO_ROOT_PASSWORD
+
+postgres:
+  # Default: localhost (los scripts corren desde el host del Codespace).
+  # Si el pipeline corre dentro de un container de la red compose, cambiar a:
+  #   host: postgres-container
+  host: "localhost"
+  port: 5432
+  db: "ny_taxi"
+  user: "postgres"
+  table: "yellow_taxi_data"
+  # Password se lee desde variable de entorno: POSTGRES_PASSWORD
+
+pipeline:
+  # Tamaño de chunk para logging de progreso (no afecta row groups)
+  log_every_n_groups: 1

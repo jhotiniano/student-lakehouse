@@ -1,10 +1,19 @@
+# Dependencias de Python — se regeneran con pip install -r requirements.txt
 venv/
-nivel-0/venv/
-nivel-1/venv/
-__pycache__/
-.ipynb_checkpoints/
-*.pyc
+.venv/
+
+# Datos crudos — se vuelven a descargar desde las URLs de las sections
 data/
-*.csv
-*.parquet
+
+# Archivos de entorno (secretos) — las configs del stack ya están trackeadas
 .env
+
+# Cachés de Python
+__pycache__/
+*.py[cod]
+
+# Checkpoints de Jupyter
+.ipynb_checkpoints/
+
+# Sistema operativo
+.DS_Store
